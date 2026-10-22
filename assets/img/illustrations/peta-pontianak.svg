@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300" font-family="Plus Jakarta Sans, system-ui, sans-serif">
+  <title>Peta ilustrasi Pontianak</title>
+  <rect width="520" height="300" rx="28" fill="#E8F6F1"/>
+  <!-- blok kota -->
+  <g fill="#D3EDE4">
+    <rect x="40" y="40" width="70" height="50" rx="8"/>
+    <rect x="124" y="30" width="90" height="60" rx="8"/>
+    <rect x="300" y="36" width="80" height="44" rx="8"/>
+    <rect x="396" y="50" width="84" height="56" rx="8"/>
+    <rect x="44" y="200" width="96" height="62" rx="8"/>
+    <rect x="160" y="214" width="70" height="52" rx="8"/>
+    <rect x="330" y="196" width="78" height="66" rx="8"/>
+    <rect x="424" y="214" width="56" height="48" rx="8"/>
+  </g>
+  <!-- Sungai Kapuas dan Sungai Landak -->
+  <path d="M-10 168C70 150 130 178 210 160S330 120 400 140 480 176 530 168" fill="none" stroke="#9FD8EE" stroke-width="26" stroke-linecap="round"/>
+  <path d="M262 146C276 110 300 80 340 58S420 20 470 6" fill="none" stroke="#9FD8EE" stroke-width="14" stroke-linecap="round"/>
+  <text x="72" y="148" fill="#2F6F86" font-size="11" font-weight="600">Sungai Kapuas</text>
+  <text x="384" y="30" fill="#2F6F86" font-size="11" font-weight="600">Sungai Landak</text>
+  <!-- Garis Khatulistiwa -->
+  <path d="M10 112H510" stroke="#0B766F" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="380" y="106" fill="#0B766F" font-size="11" font-weight="700">Garis Khatulistiwa</text>
+  <!-- titik stasiun -->
+  <g>
+    <g transform="translate(176 200)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(232 92)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(292 226)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(372 186)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(120 112)"><circle r="8" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
+    <g transform="translate(330 96)"><circle r="8" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
+  </g>
+  <!-- legenda -->
+  <g transform="translate(24 276)" font-size="11" font-weight="600" fill="#0A2E2C">
+    <circle cx="6" cy="-4" r="6" fill="#2DC98A" stroke="#0A2E2C" stroke-width="2"/>
+    <text x="18" y="0">Aktif</text>
+    <circle cx="70" cy="-4" r="6" fill="#FFFFFF" stroke="#0B766F" stroke-width="2" stroke-dasharray="2 2"/>
+    <text x="82" y="0">Segera hadir</text>
+  </g>
+</svg>

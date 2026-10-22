@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoBin · Pilah sampahmu, kumpulkan Eco Point</title>
+  <meta name="description" content="EcoBin adalah Smart Waste Station di gerai Indomaret dan Alfamart Pontianak. Setor sampah terpilah, dapat Eco Point, tukar dengan voucher belanja.">
+  <meta name="theme-color" content="#0A2E2C">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EcoBin · Pilah sampahmu, kumpulkan Eco Point">
+  <meta property="og:description" content="Smart Waste Station di gerai Indomaret dan Alfamart Pontianak. Setor sampah terpilah, dapat Eco Point, tukar dengan voucher belanja.">
+  <meta property="og:image" content="assets/img/og-image.png">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/PlusJakartaSans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <!-- Ikon dipakai ulang lewat <use href="#i-..."> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="currentColor" d="M3 11.5C6.5 4 15 3 21 5.5c-2.4 6-10.6 8.4-18 6Zm2.6-.8c4.4-.4 8.8-1.6 13-3.6-4.5 1.2-8.8 2.4-13 3.6Z"/></symbol>
+    <symbol id="i-bin" viewBox="18 46 64 46"><path fill="currentColor" fill-rule="evenodd" d="M21 52Q21 49 24 49L76 49Q79 49 79 52L79 52.5Q79 55 76.5 55L76 55Q74.8 55 74.57 56.18L69.05 84.6Q68 90 62.5 90L37.5 90Q32 90 30.95 84.6L25.43 56.18Q25.2 55 24 55L23.5 55Q21 55 21 52.5ZM37.84 64.72A2.5 2.5 0 0 1 42.83 64.33L44.16 81.28A2.5 2.5 0 0 1 39.17 81.67ZM57.17 64.33A2.5 2.5 0 0 1 62.16 64.72L60.83 81.67A2.5 2.5 0 0 1 55.84 81.28Z"/></symbol>
+    <symbol id="i-qr"viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path fill="currentColor" d="M14 14h3v3h-3zM17 17h3v3h-3zM14 19h2v1h-2zM19 14h1v2h-1z"/></symbol>
+    <symbol id="i-sort" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M5 7h14M5 12h9M5 17h5"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v11m-4-4 4 4 4-4M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M4 12h16"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 8v8M9.5 10.5 12 8l2.5 2.5"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 8a2 2 0 0 0 0 4v0a2 2 0 0 1 0 4v2h18v-2a2 2 0 0 1 0-4 2 2 0 0 0 0-4V6H3z"/><path stroke="currentColor" stroke-width="2" stroke-dasharray="2 2" d="M14 6v12"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 16a8 8 0 1 1 16 0M12 16l4-5"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M2 6h12v10H2zM14 10h4l3 3v3h-7z"/><circle cx="6" cy="17.5" r="1.8" fill="currentColor"/><circle cx="17" cy="17.5" r="1.8" fill="currentColor"/></symbol>
+    <symbol id="i-recycle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 19H4.5a1.5 1.5 0 0 1-1.3-2.2L5 13.5M11 19h8.5a1.5 1.5 0 0 0 1.3-2.2l-1.9-3.4M9 5.8l1.7-2.9a1.5 1.5 0 0 1 2.6 0L16 7.5M8 16l3 3-3 3M2.5 10.5l2.5 3 3.5-1M19.5 9l-3.5-1.5-1 3.5"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 10v10h16V10M3 4h18l-1 6H4zM10 20v-5h4v5"/></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 20V10l6 3V10l6 3V4h4v16zM7 17h2M12 17h2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 20h16M7 16v-4M12 16V7M17 16v-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 5h18v14H3zM3 6l9 7 9-7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3h3a4.5 4.5 0 0 0 4 4v3a7.5 7.5 0 0 1-4-1.2V15a6 6 0 1 1-6-6v3.2a2.8 2.8 0 1 0 3 2.8Z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5H16l.5-3h-3V8.6c0-.9.3-1.6 1.6-1.6h1.6V4.3a21 21 0 0 0-2.4-.1c-2.4 0-4 1.4-4 4.1v2.2H8v3h2.3V21Z"/></symbol>
+  </svg>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#beranda" aria-label="EcoBin, kembali ke atas">
+        <img class="brand-logo brand-logo--dark" src="assets/img/logo/ecobin-horizontal-color.svg" alt="" width="132" height="32">
+        <img class="brand-logo brand-logo--light" src="assets/img/logo/ecobin-horizontal-reversed.svg" alt="" width="132" height="32">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        <span class="visually-hidden">Buka menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigasi utama" data-nav>
+        <ul class="nav-links">
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#cara-kerja">Cara Kerja</a></li>
+          <li><a href="#lokasi">Lokasi</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <span class="btn btn--ghost is-disabled" aria-disabled="true">
+            Masuk Aplikasi <span class="tag tag--soon">Segera hadir</span>
+          </span>
+          <a class="btn btn--primary" href="#jadi-mitra">Jadi Mitra</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="beranda" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title" id="hero-title">Pilah sampahmu, kumpulkan Eco Point</h1>
+          <p class="hero-lead">Setor sampah terpilah di Smart Waste Station EcoBin di Indomaret dan Alfamart Pontianak, lalu tukarkan poinnya dengan voucher belanja.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary btn--lg" href="#cara-kerja">Lihat Cara Kerja</a>
+            <a class="btn btn--outline-light btn--lg" href="#jadi-mitra">Jadi Mitra</a>
+          </div>
+          <div class="hero-stat" data-hero-stat></div>
+        </div>
+
+        <figure class="hero-visual" aria-label="Ilustrasi Smart Waste Station EcoBin dengan tiga lubang setor: organik, anorganik, dan residu">
+          <svg class="station" viewBox="0 0 420 500" role="presentation" data-station>
+            <!-- bayangan lantai -->
+            <ellipse cx="210" cy="474" rx="150" ry="14" fill="#06201F"/>
+            <!-- daun di atas, dari logo -->
+            <g transform="translate(150 4) scale(1.4)">
+              <g class="station-leaf">
+                <path fill="#5FE3B0" fill-rule="evenodd" d="M12 34C28 6 66 2 90 14C80 36 44 44 12 34ZM21 31.2Q50 25.6 81 16.2Q51 29.8 21 31.2Z"/>
+              </g>
+            </g>
+            <!-- tutup -->
+            <rect x="52" y="72" width="316" height="26" rx="13" fill="#2DC98A"/>
+            <!-- badan -->
+            <path d="M70 98h280l-14 352a22 22 0 0 1-22 20H106a22 22 0 0 1-22-20Z" fill="#E8F6F1"/>
+            <!-- layar -->
+            <rect x="100" y="120" width="220" height="96" rx="14" fill="#0A2E2C"/>
+            <g class="station-screen-idle">
+              <rect x="118" y="138" width="60" height="60" rx="6" fill="none" stroke="#5FE3B0" stroke-width="3"/>
+              <path fill="#5FE3B0" d="M128 148h14v14h-14zM154 148h14v14h-14zM128 174h14v14h-14zM154 174h6v6h-6zM162 182h6v6h-6z"/>
+              <text x="196" y="164" fill="#E8F6F1" font-size="15" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">Scan QR</text>
+              <text x="196" y="186" fill="#8FC9BC" font-size="12" font-family="Plus Jakarta Sans, sans-serif">lalu setor</text>
+            </g>
+            <g class="station-screen-done">
+              <circle cx="148" cy="168" r="22" fill="#2DC98A"/>
+              <path d="m138 168 7 7 13-14" fill="none" stroke="#0A2E2C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="186" y="162" fill="#E8F6F1" font-size="15" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">Diterima</text>
+              <text x="186" y="186" fill="#5FE3B0" font-size="15" font-weight="700" font-family="Plus Jakarta Sans, sans-serif">+12 Eco Point</text>
+            </g>
+            <!-- tiga lubang setor -->
+            <g font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">
+              <rect x="104" y="246" width="64" height="16" rx="8" fill="#0A2E2C"/>
+              <rect x="104" y="268" width="64" height="5" rx="2.5" fill="#2DC98A"/>
+              <text x="136" y="292" fill="#0A2E2C">Organik</text>
+
+              <rect class="station-slot-target" x="178" y="246" width="64" height="16" rx="8" fill="#0A2E2C"/>
+              <rect x="178" y="268" width="64" height="5" rx="2.5" fill="#0B766F"/>
+              <text x="210" y="292" fill="#0A2E2C">Anorganik</text>
+
+              <rect x="252" y="246" width="64" height="16" rx="8" fill="#0A2E2C"/>
+              <rect x="252" y="268" width="64" height="5" rx="2.5" fill="#7E9692"/>
+              <text x="284" y="292" fill="#0A2E2C">Residu</text>
+            </g>
+            <!-- pintu kompartemen, garis seperti ikon logo -->
+            <g fill="none" stroke="#0B766F" stroke-width="7" stroke-linecap="round" opacity=".9">
+              <path d="M132 330l4 100M210 330v100M288 330l-4 100"/>
+            </g>
+            <!-- botol yang disetor: dipotong di tengah lubang Anorganik supaya terlihat masuk -->
+            <clipPath id="slot-clip">
+              <rect x="0" y="0" width="420" height="254"/>
+            </clipPath>
+            <g clip-path="url(#slot-clip)">
+              <g class="station-bottle">
+                <path d="M196 169a6 6 0 0 1 6-6h16a6 6 0 0 1 6 6v54l-6 8h-16l-6-8Z" fill="#7FD1F0" stroke="#0A2E2C" stroke-width="2.5"/>
+                <rect x="202" y="230" width="16" height="16" rx="2" fill="#0B766F" stroke="#0A2E2C" stroke-width="2"/>
+              </g>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 01 TENTANG -->
+    <section class="section" id="tentang" aria-labelledby="tentang-title">
+      <div class="container">
+        <div class="split">
+          <h2 class="section-title" id="tentang-title">Sampah yang dipilah punya nilai</h2>
+          <div class="prose">
+            <p>Organik, plastik, kertas, dan residu masih sering berakhir di satu kantong. Begitu tercampur, sampah sulit diolah dan bahan yang sebenarnya bisa didaur ulang ikut terbuang.</p>
+            <p>EcoBin menaruh Smart Waste Station di gerai Indomaret dan Alfamart yang sudah kamu kunjungi setiap minggu. Stasiun memeriksa sampahmu, mencatat beratnya, dan memberimu Eco Point. Sampah yang terkumpul kami salurkan ke mitra pengolah sesuai jenisnya.</p>
+          </div>
+        </div>
+
+        <div class="sdg-block">
+          <h3 class="sub-title">Sejalan dengan Tujuan Pembangunan Berkelanjutan</h3>
+          <ul class="sdg-list" data-sdgs></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 KENAPA ECOBIN -->
+    <section class="section section--mist" id="kenapa" aria-labelledby="kenapa-title">
+      <div class="container">
+        <h2 class="section-title align-center" id="kenapa-title">Untung buat yang setor, untung buat yang bermitra</h2>
+
+        <div class="tabs tabs--center" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="Manfaat EcoBin">
+            <button class="tab" role="tab" id="tab-pengguna" aria-selected="true" aria-controls="panel-pengguna" type="button">Untuk Pengguna</button>
+            <button class="tab" role="tab" id="tab-mitra" aria-selected="false" aria-controls="panel-mitra" tabindex="-1" type="button">Untuk Mitra</button>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-pengguna" aria-labelledby="tab-pengguna" tabindex="0">
+            <ul class="benefit-grid benefit-grid--4" data-benefits="pengguna"></ul>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-mitra" aria-labelledby="tab-mitra" tabindex="0" hidden>
+            <ul class="benefit-grid benefit-grid--3" data-benefits="mitra"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 CARA KERJA -->
+    <section class="section" id="cara-kerja" aria-labelledby="cara-title">
+      <div class="container">
+        <h2 class="section-title" id="cara-title">Enam langkah dari rumah sampai voucher</h2>
+        <ol class="steps" data-steps></ol>
+
+        <p class="callout">
+          <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+          <span>Sampah yang tercampur atau masuk ke lubang yang salah akan <strong>ditolak dan dikeluarkan kembali</strong>, dan tidak menghasilkan poin.</span>
+        </p>
+
+        <div class="backstage">
+          <h3 class="backstage-title">Di balik layar</h3>
+          <ol class="backstage-list" data-backstage></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 JENIS SAMPAH -->
+    <section class="section section--mist" id="jenis-sampah" aria-labelledby="jenis-title">
+      <div class="container">
+        <h2 class="section-title align-right" id="jenis-title">Tiga lubang, tiga kategori</h2>
+        <ul class="waste-grid" data-waste></ul>
+        <p class="note">Kategori dapat bertambah sesuai kemampuan stasiun dan kebutuhan mitra.</p>
+      </div>
+    </section>
+
+    <!-- 05 DAMPAK -->
+    <section class="section section--night" id="dampak" aria-labelledby="dampak-title">
+      <div class="container">
+        <h2 class="section-title align-center" id="dampak-title">Hasil setoran warga Pontianak sejauh ini</h2>
+        <ul class="impact-grid" data-impact></ul>
+        <p class="note note--light">Angka contoh untuk keperluan prototipe.</p>
+      </div>
+    </section>
+
+    <!-- 06 LOKASI -->
+    <section class="section" id="lokasi" aria-labelledby="lokasi-title">
+      <div class="container">
+        <div class="split split--center">
+          <div>
+            <h2 class="section-title" id="lokasi-title">Cari stasiun terdekat</h2>
+            <p class="lead">Stasiun EcoBin pertama hadir di Pontianak. Pilih jaringan gerai untuk menyaring daftar.</p>
+            <div class="filter" role="group" aria-label="Saring lokasi berdasarkan gerai" data-filter>
+              <button class="chip" type="button" aria-pressed="true" data-value="semua">Semua</button>
+              <button class="chip" type="button" aria-pressed="false" data-value="Indomaret">Indomaret</button>
+              <button class="chip" type="button" aria-pressed="false" data-value="Alfamart">Alfamart</button>
+            </div>
+          </div>
+          <img class="map-art" src="assets/img/illustrations/peta-pontianak.svg" alt="" width="520" height="300">
+        </div>
+        <ul class="location-grid" data-locations aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <!-- 07 LAYANAN -->
+    <section class="section section--mist" id="layanan" aria-labelledby="layanan-title">
+      <div class="container">
+        <h2 class="section-title align-right" id="layanan-title">Yang kami bangun dan jalankan</h2>
+        <ul class="service-grid" data-services></ul>
+      </div>
+    </section>
+
+    <!-- 08 MITRA & TESTIMONI -->
+    <section class="section" id="mitra" aria-labelledby="mitra-title">
+      <div class="container">
+        <h2 class="section-title align-center" id="mitra-title">Bersama mitra dan warga</h2>
+        <ul class="partner-list partner-list--center" data-partners></ul>
+
+        <div class="testimonials">
+          <div class="testimonials-head">
+            <h3 class="sub-title">Kata mereka</h3>
+            <div class="slider-controls">
+              <button class="icon-btn" type="button" data-slide="prev">
+                <svg class="icon" aria-hidden="true"><use href="#i-prev"/></svg>
+                <span class="visually-hidden">Testimoni sebelumnya</span>
+              </button>
+              <button class="icon-btn" type="button" data-slide="next">
+                <svg class="icon" aria-hidden="true"><use href="#i-next"/></svg>
+                <span class="visually-hidden">Testimoni berikutnya</span>
+              </button>
+            </div>
+          </div>
+          <ul class="slider" data-testimonials tabindex="0" aria-label="Daftar testimoni"></ul>
+        </div>
+
+        <p class="note">Nama mitra dan testimoni di atas adalah contoh untuk prototipe. Kerja sama dengan pihak yang disebut masih berupa rencana.</p>
+      </div>
+    </section>
+
+    <!-- 09 FAQ -->
+    <section class="section section--mist" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <h2 class="section-title" id="faq-title">Yang sering ditanyakan</h2>
+        <div class="faq" data-faqs></div>
+      </div>
+    </section>
+
+    <!-- JADI MITRA -->
+    <section class="cta" id="jadi-mitra" aria-labelledby="cta-title">
+      <div class="container cta-grid">
+        <div class="cta-copy">
+          <h2 class="cta-title" id="cta-title">Bangun program lingkungan bersama EcoBin</h2>
+          <p>Kami mencari gerai untuk lokasi stasiun, penyedia reward, mitra pengolah sampah, dan brand yang ingin menjalankan program CSR. Ceritakan rencana Anda, tim kami akan menghubungi Anda.</p>
+          <ul class="contact-list" data-contact></ul>
+        </div>
+
+        <form class="form" novalidate data-form>
+          <div class="field">
+            <label for="f-nama">Nama lengkap</label>
+            <input id="f-nama" name="nama" type="text" autocomplete="name" required aria-describedby="e-nama">
+            <p class="field-error" id="e-nama" data-error-for="nama"></p>
+          </div>
+          <div class="field">
+            <label for="f-instansi">Instansi atau perusahaan</label>
+            <input id="f-instansi" name="instansi" type="text" autocomplete="organization" required aria-describedby="e-instansi">
+            <p class="field-error" id="e-instansi" data-error-for="instansi"></p>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+            <p class="field-error" id="e-email" data-error-for="email"></p>
+          </div>
+          <div class="field">
+            <label for="f-jenis">Jenis kerja sama</label>
+            <select id="f-jenis" name="jenis" required aria-describedby="e-jenis" data-partnership-types>
+              <option value="">Pilih jenis kerja sama</option>
+            </select>
+            <p class="field-error" id="e-jenis" data-error-for="jenis"></p>
+          </div>
+          <div class="field">
+            <label for="f-pesan">Pesan</label>
+            <textarea id="f-pesan" name="pesan" rows="4" required aria-describedby="e-pesan" placeholder="Contoh: Kami punya 3 gerai di Pontianak Barat dan tertarik menjadi lokasi stasiun."></textarea>
+            <p class="field-error" id="e-pesan" data-error-for="pesan"></p>
+          </div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">Kirim pengajuan</button>
+          <p class="form-note">Prototipe: data tidak dikirim ke mana pun.</p>
+          <div class="form-success" role="status" tabindex="-1" data-form-success hidden>
+            <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+            <div>
+              <p class="form-success-title">Pengajuan terkirim (simulasi)</p>
+              <p>Terima kasih. Pada versi sungguhan, tim EcoBin akan membalas ke email Anda dalam 2 hari kerja.</p>
+              <button class="link-btn" type="button" data-form-reset>Isi pengajuan lain</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo/ecobin-horizontal-reversed.svg" alt="EcoBin" width="148" height="36">
+        <p>Smart Waste Station di gerai ritel Pontianak. Pilah sampahmu, kumpulkan Eco Point.</p>
+        <ul class="socials" data-socials></ul>
+      </div>
+      <nav class="footer-nav" aria-label="Navigasi footer">
+        <h2 class="footer-heading">Jelajahi</h2>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#cara-kerja">Cara Kerja</a></li>
+          <li><a href="#jenis-sampah">Jenis Sampah</a></li>
+          <li><a href="#lokasi">Lokasi</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h2 class="footer-heading">Kontak</h2>
+        <ul data-footer-contact></ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p class="disclaimer">EcoBin adalah konsep startup untuk tugas mata kuliah E-Bisnis. Nama mitra dan data yang ditampilkan merupakan contoh.</p>
+      <p>&copy; <span data-year>2026</span> EcoBin</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
