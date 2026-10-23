@@ -117,7 +117,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .btn--outline-light { border-color: rgba(232, 246, 241, .5); color: var(--mist); }
 .btn--outline-light:hover { border-color: var(--mint); color: var(--mint); }
 .btn--ghost { border-color: var(--line-strong); color: var(--ink); }
-.btn.is-disabled { cursor: not-allowed; color: var(--ink-soft); border-style: dashed; }
+.btn--ghost:hover { border-color: var(--teal); }
 
 .tag {
   display: inline-block; padding: .125rem .5rem; border-radius: 999px;
@@ -167,7 +167,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .nav-links a:hover, .nav-links a[aria-current="true"] { border-bottom-color: var(--leaf); }
 .site-header.is-solid .nav-links a { color: var(--ink); }
 .nav-actions { display: flex; align-items: center; gap: .75rem; }
-.site-header:not(.is-solid) .btn--ghost { border-color: rgba(232, 246, 241, .35); color: var(--on-night-soft); }
+.site-header:not(.is-solid) .btn--ghost { border-color: rgba(232, 246, 241, .45); color: var(--mist); }
+.site-header:not(.is-solid) .btn--ghost:hover { border-color: var(--mint); color: var(--mint); }
 
 @media (max-width: 960px) {
   .nav-toggle { display: grid; }
@@ -182,7 +183,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .nav-links a, .site-header:not(.is-solid) .nav-links a { display: block; color: var(--ink); padding: .875rem 0; border-bottom: 1px solid var(--line); font-size: var(--fs-md); }
   .nav-actions { flex-direction: column-reverse; align-items: stretch; }
   .nav-actions .btn { min-height: 52px; }
-  .site-header:not(.is-solid) .btn--ghost { border-color: var(--line-strong); color: var(--ink-soft); }
+  .site-header:not(.is-solid) .btn--ghost, .site-header:not(.is-solid) .btn--ghost:hover { border-color: var(--line-strong); color: var(--ink); }
   .site-header.menu-open { background: var(--white); }
   .site-header.menu-open .brand-logo--dark { display: block; }
   .site-header.menu-open .brand-logo--light { display: none; }
@@ -377,14 +378,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .impact-label { display: block; margin-top: .75rem; color: var(--on-night-soft); }
 
 /* ---------- 06 Lokasi ---------- */
-.filter { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.75rem; }
-.chip {
-  min-height: 44px; padding: .5rem 1.125rem; border: 2px solid var(--line-strong); border-radius: 999px;
-  background: var(--white); font-weight: 700; font-size: var(--fs-sm); cursor: pointer;
-  transition: background-color .2s, border-color .2s, color .2s;
-}
-.chip:hover { border-color: var(--teal); }
-.chip[aria-pressed="true"] { background: var(--night); border-color: var(--night); color: var(--mist); }
 .map-art { width: 100%; height: auto; }
 
 .location-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
@@ -392,7 +385,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
   display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start;
   padding: 1.25rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white);
 }
-.location[hidden] { display: none; }
 .location-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--mist); color: var(--teal); }
 .location h3 { font-size: var(--fs-base); line-height: 1.35; }
 .location p { color: var(--ink-soft); font-size: var(--fs-sm); margin: .125rem 0 .625rem; }
@@ -410,7 +402,13 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .service-icon .icon { width: 28px; height: 28px; }
 .service h3 { font-size: var(--fs-lg); line-height: 1.25; margin-top: 2rem; }
 .service p { color: var(--ink-soft); max-width: 46ch; }
-.service .tag { position: absolute; top: 2rem; right: 2rem; }
+.service-link {
+  display: inline-flex; align-items: center; gap: .25rem; align-self: flex-start; margin-top: .25rem;
+  min-height: 44px; font-weight: 700; color: var(--teal); text-decoration: none;
+}
+.service-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.service-link .icon { width: 1.1em; height: 1.1em; transition: transform .2s var(--ease); }
+.service-link:hover .icon { transform: translateX(3px); }
 
 /* ---------- 08 Mitra & testimoni ---------- */
 .partner-list { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2.5rem; }
@@ -546,7 +544,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .tab-list, .tabs--center .tab-list { display: flex; width: auto; }
   .tab { flex: 1; padding-inline: .75rem; }
   .service { padding: 1.5rem; min-height: 0; }
-  .service .tag { top: 1.5rem; right: 1.5rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .faq-item p { padding-right: 0; }
 }

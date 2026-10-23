@@ -24,10 +24,7 @@
   <g>
     <g transform="translate(176 200)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
     <g transform="translate(232 92)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
-    <g transform="translate(292 226)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
-    <g transform="translate(372 186)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
     <g transform="translate(120 112)"><circle r="8" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
-    <g transform="translate(330 96)"><circle r="8" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
   </g>
   <!-- legenda -->
   <g transform="translate(24 276)" font-size="11" font-weight="600" fill="#0A2E2C">

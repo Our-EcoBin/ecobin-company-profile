@@ -33,5 +33,5 @@ assets/
 ## Catatan
 
 - Form "Jadi Mitra" hanya simulasi: data divalidasi lalu muncul pesan sukses, tanpa dikirim ke mana pun.
-- Tombol "Masuk Aplikasi" sengaja dinonaktifkan sampai website pengguna selesai.
+- Tombol "Masuk Aplikasi" dan link di kartu Layanan mengarah ke aplikasi EcoBin di https://ecobin-app-self.vercel.app (alamatnya diatur di `index.html` dan `assets/js/data.js`).
 - Animasi otomatis mati bila pengaturan perangkat "kurangi gerakan" aktif.

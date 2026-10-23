@@ -19,7 +19,7 @@ window.ECOBIN_DATA = {
 
   benefits: {
     pengguna: [
-      { title: "Setor sambil belanja", text: "Stasiun ada di gerai Indomaret dan Alfamart. Bawa sampahmu sekalian waktu belanja, tanpa perlu ke tempat khusus." },
+      { title: "Setor sambil belanja", text: "Stasiun ada di gerai Indomaret. Bawa sampahmu sekalian waktu belanja, tanpa perlu ke tempat khusus." },
       { title: "Dicek otomatis", text: "Kamera dan sensor langsung memeriksa sampahmu. Tidak perlu menunggu petugas atau jam buka tertentu." },
       { title: "Dapat Eco Point", text: "Setiap setoran yang diterima menambah Eco Point. Kumpulkan, lalu tukarkan dengan voucher belanja." },
       { title: "Riwayat tercatat", text: "Jenis, berat, dan poin dari setiap setoran tersimpan di akunmu dan bisa dilihat kapan saja." }
@@ -37,7 +37,7 @@ window.ECOBIN_DATA = {
     { title: "Masukkan", text: "Masukkan sampah ke lubang sesuai kategorinya." },
     { title: "Dicek dan ditimbang", text: "Kamera AI mengenali jenisnya, load cell mengukur beratnya." },
     { title: "Dapat Eco Point", text: "Poin masuk ke akunmu sesuai jenis dan berat sampah." },
-    { title: "Tukar voucher", text: "Tukarkan Eco Point dengan voucher belanja Indomaret atau Alfamart." }
+    { title: "Tukar voucher", text: "Tukarkan Eco Point dengan voucher belanja Indomaret." }
   ],
 
   behindTheScenes: [
@@ -69,23 +69,19 @@ window.ECOBIN_DATA = {
 
   locations: [
     { retailer: "Indomaret", name: "Indomaret Ahmad Yani", address: "Jl. Ahmad Yani, Pontianak Selatan", status: "aktif" },
-    { retailer: "Alfamart", name: "Alfamart Gajah Mada", address: "Jl. Gajah Mada, Pontianak Kota", status: "aktif" },
     { retailer: "Indomaret", name: "Indomaret Reformasi", address: "Jl. Reformasi, Pontianak Tenggara", status: "aktif" },
-    { retailer: "Alfamart", name: "Alfamart Tanjungpura", address: "Jl. Tanjungpura, Pontianak Timur", status: "aktif" },
-    { retailer: "Indomaret", name: "Indomaret Prof. M. Yamin", address: "Jl. Prof. M. Yamin, Pontianak Kota", status: "segera" },
-    { retailer: "Alfamart", name: "Alfamart Khatulistiwa", address: "Jl. Khatulistiwa, Pontianak Utara", status: "segera" }
+    { retailer: "Indomaret", name: "Indomaret Prof. M. Yamin", address: "Jl. Prof. M. Yamin, Pontianak Kota", status: "segera" }
   ],
 
   services: [
-    { id: "station", title: "Smart Waste Station", text: "Unit setor sampah dengan kamera AI, sensor, dan load cell. Dirakit dan dirawat langsung oleh tim EcoBin.", soon: false },
-    { id: "app", title: "Aplikasi Member dan Eco Point", text: "QR membership, saldo Eco Point, riwayat setoran, dan penukaran voucher dalam satu aplikasi.", soon: true },
-    { id: "dashboard", title: "Dashboard Pengelola", text: "Pantau isi tiap unit, volume per jenis sampah, dan jadwal angkut dari satu layar.", soon: true },
-    { id: "csr", title: "Kemitraan CSR dan Sponsorship", text: "Program lingkungan bersama brand Anda, dengan laporan dampak dari data setoran nyata.", soon: false }
+    { id: "station", title: "Smart Waste Station", text: "Unit setor sampah dengan kamera AI, sensor, dan load cell. Dirakit dan dirawat langsung oleh tim EcoBin." },
+    { id: "app", title: "Aplikasi Member dan Eco Point", text: "QR membership, saldo Eco Point, riwayat setoran, dan penukaran voucher dalam satu aplikasi.", link: { label: "Buka aplikasi", href: "https://ecobin-app-self.vercel.app" } },
+    { id: "dashboard", title: "Dashboard Pengelola", text: "Pantau isi tiap unit, volume per jenis sampah, dan jadwal angkut dari satu layar.", link: { label: "Masuk sebagai pengelola", href: "https://ecobin-app-self.vercel.app/masuk" } },
+    { id: "csr", title: "Kemitraan CSR dan Sponsorship", text: "Program lingkungan bersama brand Anda, dengan laporan dampak dari data setoran nyata.", link: { label: "Ajukan kemitraan", href: "#jadi-mitra" } }
   ],
 
   partners: [
     { name: "Indomaret", role: "Lokasi dan reward" },
-    { name: "Alfamart", role: "Lokasi dan reward" },
     { name: "Bank Sampah Mitra", role: "Pengolah sampah" },
     { name: "Mitra Daur Ulang", role: "Pengolah sampah" }
   ],
@@ -101,7 +97,7 @@ window.ECOBIN_DATA = {
     { q: "Sampah apa saja yang diterima?", a: "Saat ini stasiun menerima sampah organik, anorganik, dan residu yang sudah dipilah. Daftar kategori bisa bertambah sesuai kemampuan stasiun dan kebutuhan mitra pengolah." },
     { q: "Kenapa sampah saya ditolak?", a: "Stasiun menolak sampah yang tercampur atau tidak sesuai dengan lubang kategorinya, lalu mengeluarkannya kembali. Pisahkan ulang sampahmu dan masukkan ke lubang yang sesuai." },
     { q: "Bagaimana Eco Point dihitung?", a: "Eco Point dihitung dari jenis dan berat sampah yang diterima. Nilai poin per kategori ditetapkan oleh pengelola EcoBin bersama mitra dan bisa berubah. Setoran yang ditolak tidak menghasilkan poin." },
-    { q: "Bagaimana cara menukar Eco Point?", a: "Buka menu Reward di aplikasi, pilih voucher Indomaret atau Alfamart yang poinnya cukup, lalu tunjukkan kode voucher di kasir." },
+    { q: "Bagaimana cara menukar Eco Point?", a: "Buka menu Reward di aplikasi, pilih voucher Indomaret yang poinnya cukup, lalu tunjukkan kode voucher di kasir." },
     { q: "Bagaimana cara menjadi mitra EcoBin?", a: "Isi formulir kemitraan di bagian bawah halaman ini. Tim kami akan menghubungi Anda untuk membahas bentuk kerja sama." }
   ],
 

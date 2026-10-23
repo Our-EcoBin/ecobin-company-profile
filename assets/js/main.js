@@ -87,7 +87,7 @@
       var status = loc.status === "aktif"
         ? '<span class="tag tag--active">Aktif</span>'
         : '<span class="tag tag--soon">Segera Hadir</span>';
-      return '<li class="location" data-retailer="' + escapeHtml(loc.retailer) + '">' +
+      return '<li class="location">' +
         '<span class="location-icon">' + icon("store") + "</span>" +
         "<div><h3>" + escapeHtml(loc.name) + "</h3><p>" + escapeHtml(loc.address) + "</p>" + status + "</div></li>";
     });
@@ -95,8 +95,9 @@
     var serviceIcons = { station: "bin", app: "qr", dashboard: "chart", csr: "leaf" };
     render("[data-services]", data.services, function (service) {
       return '<li class="service"><span class="service-icon">' + icon(serviceIcons[service.id] || "leaf") + "</span>" +
-        (service.soon ? '<span class="tag tag--soon">Segera hadir</span>' : "") +
-        "<h3>" + escapeHtml(service.title) + "</h3><p>" + escapeHtml(service.text) + "</p></li>";
+        "<h3>" + escapeHtml(service.title) + "</h3><p>" + escapeHtml(service.text) + "</p>" +
+        (service.link ? '<a class="service-link" href="' + escapeHtml(service.link.href) + '">' + escapeHtml(service.link.label) + icon("next") + "</a>" : "") +
+        "</li>";
     });
 
     render("[data-partners]", data.partners, function (partner) {
@@ -207,21 +208,6 @@
         if (e.key === "Home") next = tabs[0];
         if (e.key === "End") next = tabs[tabs.length - 1];
         if (next) { e.preventDefault(); select(next); next.focus(); }
-      });
-    });
-  }
-
-  /* ---------- Filter lokasi ---------- */
-
-  function initFilter() {
-    var chips = $all("[data-filter] .chip");
-    chips.forEach(function (chip) {
-      chip.addEventListener("click", function () {
-        var value = chip.dataset.value;
-        chips.forEach(function (c) { c.setAttribute("aria-pressed", String(c === chip)); });
-        $all("[data-locations] .location").forEach(function (loc) {
-          loc.hidden = value !== "semua" && loc.dataset.retailer !== value;
-        });
       });
     });
   }
@@ -363,7 +349,6 @@
   renderContent();
   initHeader();
   initTabs();
-  initFilter();
   initSlider();
   initCounters();
   initReveal();
