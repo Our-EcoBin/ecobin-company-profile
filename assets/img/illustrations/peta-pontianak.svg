@@ -20,11 +20,26 @@
   <!-- Garis Khatulistiwa -->
   <path d="M10 112H510" stroke="#0B766F" stroke-width="2" stroke-dasharray="6 6"/>
   <text x="380" y="106" fill="#0B766F" font-size="11" font-weight="700">Garis Khatulistiwa</text>
-  <!-- titik stasiun -->
+  <!-- wilayah -->
+  <g font-size="10" font-weight="700" fill="#5E7774" letter-spacing="1">
+    <text x="196" y="132">KOTA PONTIANAK</text>
+    <text x="392" y="290">KUBU RAYA</text>
+  </g>
+  <!-- titik stasiun: 9 aktif, 4 segera hadir -->
   <g>
-    <g transform="translate(176 200)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
-    <g transform="translate(232 92)"><circle r="16" fill="#2DC98A" opacity=".25"/><circle r="8" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
-    <g transform="translate(120 112)"><circle r="8" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
+    <g transform="translate(180 100)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(120 192)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(88 222)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(205 200)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(168 240)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(255 226)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(302 198)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(372 242)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(448 236)"><circle r="14" fill="#2DC98A" opacity=".25"/><circle r="7" fill="#2DC98A" stroke="#0A2E2C" stroke-width="3"/></g>
+    <g transform="translate(338 96)"><circle r="7" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
+    <g transform="translate(316 262)"><circle r="7" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
+    <g transform="translate(480 118)"><circle r="7" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
+    <g transform="translate(36 200)"><circle r="7" fill="#FFFFFF" stroke="#0B766F" stroke-width="3" stroke-dasharray="3 3"/></g>
   </g>
   <!-- legenda -->
   <g transform="translate(24 276)" font-size="11" font-weight="600" fill="#0A2E2C">

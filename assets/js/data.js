@@ -7,7 +7,7 @@ window.ECOBIN_DATA = {
   stats: [
     { value: 12480, suffix: " kg", label: "sampah terpilah terkumpul", highlight: true },
     { value: 3250, suffix: "", label: "pengguna terdaftar" },
-    { value: 15, suffix: "", label: "unit Smart Waste Station" },
+    { value: 13, suffix: "", label: "titik Smart Waste Station di Pontianak dan Kubu Raya (9 sudah aktif)" },
     { value: 1120, suffix: "", label: "voucher ditukarkan" }
   ],
 
@@ -68,9 +68,21 @@ window.ECOBIN_DATA = {
   ],
 
   locations: [
+    // Kota Pontianak
     { retailer: "Indomaret", name: "Indomaret Ahmad Yani", address: "Jl. Ahmad Yani, Pontianak Selatan", status: "aktif" },
     { retailer: "Indomaret", name: "Indomaret Reformasi", address: "Jl. Reformasi, Pontianak Tenggara", status: "aktif" },
-    { retailer: "Indomaret", name: "Indomaret Prof. M. Yamin", address: "Jl. Prof. M. Yamin, Pontianak Kota", status: "segera" }
+    { retailer: "Indomaret", name: "Indomaret Prof. M. Yamin", address: "Jl. Prof. M. Yamin, Pontianak Kota", status: "aktif" },
+    { retailer: "Indomaret", name: "Indomaret Gajah Mada", address: "Jl. Gajah Mada, Pontianak Selatan", status: "aktif" },
+    { retailer: "Indomaret", name: "Indomaret Imam Bonjol", address: "Jl. Imam Bonjol, Pontianak Selatan", status: "aktif" },
+    { retailer: "Indomaret", name: "Indomaret Kom. Yos Sudarso", address: "Jl. Kom. Yos Sudarso, Pontianak Barat", status: "aktif" },
+    { retailer: "Indomaret", name: "Indomaret Khatulistiwa", address: "Jl. Khatulistiwa, Pontianak Utara", status: "aktif" },
+    { retailer: "Indomaret", name: "Indomaret Tanjung Raya 2", address: "Jl. Tanjung Raya 2, Pontianak Timur", status: "segera" },
+    { retailer: "Indomaret", name: "Indomaret Parit Haji Husin 2", address: "Jl. Parit Haji Husin 2, Pontianak Tenggara", status: "segera" },
+    // Kabupaten Kubu Raya
+    { retailer: "Indomaret", name: "Indomaret Sungai Raya Dalam", address: "Jl. Sungai Raya Dalam, Sungai Raya, Kubu Raya", status: "aktif" },
+    { retailer: "Indomaret", name: "Indomaret Adisucipto", address: "Jl. Adisucipto, Sungai Raya, Kubu Raya", status: "aktif" },
+    { retailer: "Indomaret", name: "Indomaret Trans Kalimantan", address: "Jl. Trans Kalimantan, Sungai Ambawang, Kubu Raya", status: "segera" },
+    { retailer: "Indomaret", name: "Indomaret Sungai Kakap", address: "Jl. Raya Sungai Kakap, Sungai Kakap, Kubu Raya", status: "segera" }
   ],
 
   services: [
